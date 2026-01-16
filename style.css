@@ -6,17 +6,17 @@ body {
     color: #333;
     line-height: 1.6;
     
-    /* DODAWANIE TŁA Z OBRAZKA */
-    background-image: url('images/tlo.jpg'); /* ZMIEŃ 'twoje_zdjecie_tla.jpg' na nazwę swojego pliku! */
+    /* TŁO Z OBRAZKA */
+    background-image: url('images/tlo.jpg'); 
     background-repeat: no-repeat;
-    background-size: cover; /* Obrazek pokrywa całe tło */
-    background-attachment: fixed; /* Tło jest nieruchome podczas przewijania */
-    background-position: center; /* Wyśrodkowanie obrazka */
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-position: center; 
 }
 
-/* Styl nagłówka (Header) - ciemne tło */
+/* Styl nagłówka (Header) */
 header {
-    background-color: #0d1a2f; /* Bardzo ciemny granat/czerń jak na obrazku */
+    background-color: #0d1a2f; 
     color: white;
     padding: 1rem 0;
     text-align: center;
@@ -34,62 +34,70 @@ nav a {
 }
 
 nav a:hover {
-    color: #28a745; /* Zielony kolor akcentu z obrazka */
+    color: #28a745; 
 }
 
-/* Główna zawartość */
+/* Główna zawartość - ten biały kontener */
 main {
-    max-width: 800px;
+    max-width: 900px; /* Zwiększyłem odrobinę, żeby pomieścić kafelki */
     margin: 40px auto;
-    padding: 20px;
-    /* Dodajemy półprzezroczyste tło do głównej treści, aby tekst był czytelny na tle obrazka */
+    padding: 40px;
     background-color: rgba(255, 255, 255, 0.95); 
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-/* Styl stopki */
-footer {
+/* --- STYLE DLA NOWYCH SEKCJI (O NAS I DLACZEGO WARTO) --- */
+
+.content-section {
+    margin-top: 60px; /* Odstęp od galerii aut */
+    padding-top: 40px;
+    border-top: 1px solid #ddd; /* Delikatna linia oddzielająca */
     text-align: center;
-    padding: 20px 0;
-    background-color: #0d1a2f;
-    color: white;
-    margin-top: 40px;
 }
 
-/* Pozostałe style z poprzedniej wiadomości (car-offer, car-link, details-btn, price itp.) ... */
-
-.car-offer {
-    background: white;
+.content-section h2 {
+    color: #0d1a2f;
     margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 1.8rem;
 }
 
-.price {
-    font-size: 1.5em;
-    color: #28a745; /* Zielony kolor z obrazka */
+.lead-text {
     font-weight: bold;
+    font-size: 1.1rem;
+    color: #222;
 }
 
-.details-btn {
-    display: inline-block;
-    background-color: #28a745; /* Zielony kolor z obrazka */
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    border: none;
+/* Kafelki z zaletami */
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
 }
 
-.details-page img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 5px;
+.feature-box {
+    background: #f8f9fa; /* Bardzo jasne tło dla kafelków */
+    padding: 20px;
+    border-radius: 8px;
+    width: 240px;
+    border: 1px solid #eee;
+    transition: transform 0.3s;
 }
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    border-color: #28a745;
+}
+
+.feature-box h3 {
+    color: #28a745;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* --- RESZTA TWOICH STYLÓW --- */
 
 .fleet-gallery {
     display: flex;
@@ -105,10 +113,9 @@ footer {
     display: block;
     transition: transform 0.2s;
     width: 220px;
-    background-color: white; /* Dodajemy białe tło dla czytelności */
+    background-color: #f1f1f1; 
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .car-link:hover {
@@ -119,10 +126,18 @@ footer {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    /* Usunięcie box-shadow z samego obrazka, jest już na linku */
 }
 
 .car-link p {
     font-weight: bold;
     margin-top: 10px;
+}
+
+/* Styl stopki */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #0d1a2f;
+    color: white;
+    margin-top: 40px;
 }

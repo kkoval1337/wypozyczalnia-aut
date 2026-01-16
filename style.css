@@ -1,4 +1,96 @@
-/* Nowe reguły CSS dla strony głównej (index.html) */
+/* Globalne style i tło z obrazka */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    
+    /* DODAWANIE TŁA Z OBRAZKA */
+    background-image: url('images/twoje_zdjecie_tla.jpg'); /* ZMIEŃ 'twoje_zdjecie_tla.jpg' na nazwę swojego pliku! */
+    background-repeat: no-repeat;
+    background-size: cover; /* Obrazek pokrywa całe tło */
+    background-attachment: fixed; /* Tło jest nieruchome podczas przewijania */
+    background-position: center; /* Wyśrodkowanie obrazka */
+}
+
+/* Styl nagłówka (Header) - ciemne tło */
+header {
+    background-color: #0d1a2f; /* Bardzo ciemny granat/czerń jak na obrazku */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Styl linków w nawigacji */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #28a745; /* Zielony kolor akcentu z obrazka */
+}
+
+/* Główna zawartość */
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    /* Dodajemy półprzezroczyste tło do głównej treści, aby tekst był czytelny na tle obrazka */
+    background-color: rgba(255, 255, 255, 0.95); 
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* Styl stopki */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #0d1a2f;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Pozostałe style z poprzedniej wiadomości (car-offer, car-link, details-btn, price itp.) ... */
+
+.car-offer {
+    background: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.price {
+    font-size: 1.5em;
+    color: #28a745; /* Zielony kolor z obrazka */
+    font-weight: bold;
+}
+
+.details-btn {
+    display: inline-block;
+    background-color: #28a745; /* Zielony kolor z obrazka */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: none;
+}
+
+.details-page img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
 .fleet-gallery {
     display: flex;
     justify-content: center;
@@ -12,7 +104,11 @@
     text-align: center;
     display: block;
     transition: transform 0.2s;
-    width: 220px; /* Stała szerokość kontenera */
+    width: 220px;
+    background-color: white; /* Dodajemy białe tło dla czytelności */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .car-link:hover {
@@ -23,7 +119,7 @@
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    /* Usunięcie box-shadow z samego obrazka, jest już na linku */
 }
 
 .car-link p {

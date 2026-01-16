@@ -1,143 +1,42 @@
-/* Globalne style i tło z obrazka */
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    line-height: 1.6;
-    
-    /* TŁO Z OBRAZKA */
-    background-image: url('images/tlo.jpg'); 
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-attachment: fixed; 
-    background-position: center; 
-}
-
-/* Styl nagłówka (Header) */
-header {
-    background-color: #0d1a2f; 
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-/* Styl linków w nawigacji */
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    padding: 5px 10px;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #28a745; 
-}
-
-/* Główna zawartość - ten biały kontener */
-main {
-    max-width: 900px; /* Zwiększyłem odrobinę, żeby pomieścić kafelki */
-    margin: 40px auto;
-    padding: 40px;
-    background-color: rgba(255, 255, 255, 0.95); 
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-/* --- STYLE DLA NOWYCH SEKCJI (O NAS I DLACZEGO WARTO) --- */
-
-.content-section {
-    margin-top: 60px; /* Odstęp od galerii aut */
-    padding-top: 40px;
-    border-top: 1px solid #ddd; /* Delikatna linia oddzielająca */
-    text-align: center;
-}
-
-.content-section h2 {
-    color: #0d1a2f;
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-}
-
-.lead-text {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #222;
-}
-
-/* Kafelki z zaletami */
-.features-grid {
+/* Układ: Obrazek obok tekstu */
+.details-wrapper {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 30px;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Na telefonach wskoczy jedno pod drugie */
+    margin-top: 20px;
 }
 
-.feature-box {
-    background: #f8f9fa; /* Bardzo jasne tło dla kafelków */
-    padding: 20px;
-    border-radius: 8px;
-    width: 240px;
-    border: 1px solid #eee;
-    transition: transform 0.3s;
+/* Styl dla mniejszego obrazka z animacją */
+.image-container {
+    flex: 1;
+    min-width: 300px;
+    animation: floating 3s ease-in-out infinite; /* Delikatne pływanie */
 }
 
-.feature-box:hover {
-    transform: translateY(-5px);
-    border-color: #28a745;
-}
-
-.feature-box h3 {
-    color: #28a745;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-/* --- RESZTA TWOICH STYLÓW --- */
-
-.fleet-gallery {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.car-link {
-    text-decoration: none;
-    color: #333;
-    text-align: center;
-    display: block;
-    transition: transform 0.2s;
-    width: 220px;
-    background-color: #f1f1f1; 
-    padding: 10px;
-    border-radius: 8px;
-}
-
-.car-link:hover {
-    transform: scale(1.05);
-}
-
-.car-link img {
-    max-width: 100%;
+.image-container img {
+    width: 100%;
+    max-width: 400px;
     height: auto;
-    border-radius: 8px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.4s ease;
 }
 
-.car-link p {
-    font-weight: bold;
-    margin-top: 10px;
+.image-container img:hover {
+    transform: scale(1.05); /* Powiększenie po najechaniu */
 }
 
-/* Styl stopki */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #0d1a2f;
-    color: white;
-    margin-top: 40px;
+/* Styl dla tekstu obok */
+.specs-container {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+/* Kluczowe klatki animacji pływania */
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
 }

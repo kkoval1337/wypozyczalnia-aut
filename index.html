@@ -3,102 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wypożyczalnia Aut – Szybko i Tanio</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 20px;
-            line-height: 1.5;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            background: #f8f9fa;
-            color: #222;
-        }
-        h1, h2 { color: #d32f2f; }
-        nav {
-            background: #d32f2f;
-            padding: 12px;
-            margin-bottom: 25px;
-            border-radius: 6px;
-        }
-        nav a {
-            color: white;
-            margin-right: 20px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .car {
-            background: white;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .price { 
-            font-size: 1.3em; 
-            color: #2e7d32; 
-            font-weight: bold; 
-        }
-        footer {
-            margin-top: 50px;
-            text-align: center;
-            color: #777;
-            font-size: 0.9em;
-        }
-    </style>
+    <title>Wypożyczalnia Aut - Flota</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>Nasza Flota Samochodów</h1>
+        <nav>
+            <a href="index.html">Główna</a>
+            <a href="yaris.html">Toyota Yaris</a>
+            <a href="octavia.html">Skoda Octavia</a>
+            <a href="x3.html">BMW X3</a>
+        </nav>
+    </header>
 
-<h1>Wypożyczalnia Aut</h1>
-<p><strong>Szybko • Tanio • Bez zbędnych formalności</strong></p>
+    <main>
+        <div class="car-offer">
+            <h2>Toyota Yaris 1.5 Hybrid</h2>
+            <p class="price">119 zł / dobę</p>
+            <p>Rok 2022 • Automat • Klimatyzacja • Mały przebieg</p>
+            <a href="yaris.html" class="details-btn">Zobacz szczegóły i zdjęcia</a>
+        </div>
 
-<nav>
-    <a href="#start">Strona główna</a>
-    <a href="#auta">Nasze auta</a>
-    <a href="#kontakt">Kontakt</a>
-</nav>
+        <div class="car-offer">
+            <h2>Skoda Octavia 1.5 TSI</h2>
+            <p class="price">159 zł / dobę</p>
+            <p>Rok 2021 • Manual • Duży bagażnik • Klimatyzacja dwustrefowa</p>
+            <a href="octavia.html" class="details-btn">Zobacz szczegóły i zdjęcia</a>
+        </div>
 
-<section id="start">
-    <h2>Witaj!</h2>
-    <p>
-        Potrzebujesz samochodu na weekend, wakacje, służbowo albo na kilka dni?<br>
-        Mamy dla Ciebie sprawdzone, czyste i w pełni ubezpieczone auta w bardzo dobrych cenach.
-    </p>
-</section>
-
-<section id="auta">
-    <h2>Dostępne samochody – stan na dziś</h2>
-
-    <div class="car">
-        <h3>Toyota Yaris 1.5 Hybrid</h3>
-        <p class="price">119 zł / dobę</p>
-        <p>Rok 2022 • Automat • Klimatyzacja • Mały przebieg • Super oszczędna</p>
-    </div>
-
-    <div class="car">
-        <h3>Skoda Octavia 1.5 TSI</h3>
-        <p class="price">159 zł / dobę</p>
-        <p>Rok 2021 • Manual • Duży bagażnik • Klimatyzacja dwustrefowa</p>
-    </div>
-
-    <div class="car">
-        <h3>BMW X3 xDrive 20d</h3>
-        <p class="price">289 zł / dobę</p>
-        <p>Rok 2020 • Automat • Skóra • Navi • Kamery 360°</p>
-    </div>
-</section>
-
-<section id="kontakt">
-    <h2>Skontaktuj się z nami</h2>
-    <p><strong>Telefon / WhatsApp:</strong> 666 777 888</p>
-    <p><strong>Email:</strong> kontakt@wypozyczalnia-fast.pl</p>
-    <p><strong>Godziny:</strong> 8:00 – 22:00 (7 dni w tygodniu)</p>
-</section>
-
-<footer>
-    © 2025 Wypożyczalnia Aut FastCar • Wszelkie prawa zastrzeżone
-</footer>
-
+        <div class="car-offer">
+            <h2>BMW X3 xDrive 20d</h2>
+            <p class="price">289 zł / dobę</p>
+            <p>Rok 2020 • Automat • Skóra • Navi • Kamery 360°</p>
+            <a href="x3.html" class="details-btn">Zobacz szczegóły i zdjęcia</a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Wypożyczalnia Aut</p>
+    </footer>
 </body>
 </html>

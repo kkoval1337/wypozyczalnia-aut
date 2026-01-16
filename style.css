@@ -7,7 +7,7 @@ body {
     line-height: 1.6;
     
     /* DODAWANIE TŁA Z OBRAZKA */
-    background-image: url('images/twoje_zdjecie_tla.jpg'); /* ZMIEŃ 'twoje_zdjecie_tla.jpg' na nazwę swojego pliku! */
+    background-image: url('images/tlo.jpg'); /* ZMIEŃ 'twoje_zdjecie_tla.jpg' na nazwę swojego pliku! */
     background-repeat: no-repeat;
     background-size: cover; /* Obrazek pokrywa całe tło */
     background-attachment: fixed; /* Tło jest nieruchome podczas przewijania */

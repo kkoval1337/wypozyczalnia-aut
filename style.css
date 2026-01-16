@@ -1,110 +1,83 @@
-/* Globalne style */
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    line-height: 1.6;
-    
-    /* TŁO - poprawione na małe litery */
-    background-image: url('images/tlo.jpg'); 
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-attachment: fixed; 
-    background-position: center; 
-}
+/* --- STYLE DLA PODSTRON AUT (Szczegóły) --- */
 
-/* Nagłówek */
-header {
-    background-color: #0d1a2f; 
-    color: white;
-    padding: 1.5rem 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #28a745; 
-}
-
-/* Biały kontener na treść - tak jak chciałeś */
-main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 40px;
-    background-color: rgba(255, 255, 255, 0.95); 
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
-}
-
-h2 {
-    text-align: center;
-    color: #0d1a2f;
-}
-
-/* Galeria aut */
-.fleet-gallery {
+/* Główny kontener na zdjęcie i opis */
+.details-wrapper {
     display: flex;
+    align-items: center; /* Wyśrodkowanie w pionie */
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-}
-
-.car-link {
-    text-decoration: none;
-    color: #333;
-    text-align: center;
-    width: 240px;
-    transition: transform 0.2s;
-}
-
-.car-link:hover {
-    transform: scale(1.05);
-}
-
-.car-link img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* Sekcje tekstowe na dole (żeby był scroll) */
-.content-section {
-    margin-top: 50px;
-    padding-top: 30px;
-    border-top: 1px solid #ddd;
-}
-
-.features-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px; /* Odstęp między zdjęciem a tekstem */
+    flex-wrap: wrap; /* Na telefonie jedno spadnie pod drugie */
     margin-top: 20px;
 }
 
-.feature-box {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    width: 250px;
-    text-align: center;
-    border: 1px solid #eee;
+/* Kontener na zdjęcie z animacją */
+.image-container {
+    flex: 1 1 300px; /* Elastyczna szerokość, min. 300px */
+    max-width: 450px; /* Maksymalna szerokość zdjęcia */
+    animation: floating 3s ease-in-out infinite; /* Animacja pływania */
 }
 
-/* Stopka */
-footer {
-    text-align: center;
-    padding: 30px 0;
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Kontener na tekst */
+.specs-container {
+    flex: 1 1 300px; /* Elastyczna szerokość, min. 300px */
+    text-align: left;
+}
+
+.specs-container h2 {
+    text-align: left; /* Nagłówek do lewej */
+    margin-top: 0;
+    color: #0d1a2f;
+}
+
+.specs-container ul {
+    list-style-type: none; /* Usunięcie kropek z listy */
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+.specs-container li {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee; /* Delikatna linia pod każdym punktem */
+}
+
+/* Przycisk powrotu */
+.details-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
     background-color: #0d1a2f;
     color: white;
-    margin-top: 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.details-btn:hover {
+    background-color: #28a745;
+}
+
+/* --- ANIMACJA PŁYWANIA --- */
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); } /* Uniesienie o 12px */
+    100% { transform: translateY(0px); }
+}
+
+/* --- POPRAWKA DLA STRONY KONTAKTOWEJ --- */
+/* Usuwamy ewentualne style, które psuły kontakt */
+.contact-info {
+    text-align: left;
+    font-size: 1.1rem;
+}
+.contact-info li {
+    margin-bottom: 15px;
 }

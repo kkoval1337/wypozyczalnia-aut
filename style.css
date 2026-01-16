@@ -1,83 +1,137 @@
-/* --- STYLE DLA PODSTRON AUT (Szczegóły) --- */
-
-/* Główny kontener na zdjęcie i opis */
-.details-wrapper {
-    display: flex;
-    align-items: center; /* Wyśrodkowanie w pionie */
-    justify-content: center;
-    gap: 40px; /* Odstęp między zdjęciem a tekstem */
-    flex-wrap: wrap; /* Na telefonie jedno spadnie pod drugie */
-    margin-top: 20px;
+/* Globalne style */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    background-image: url('images/tlo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
-/* Kontener na zdjęcie z animacją */
+header {
+    background-color: #0d1a2f;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover { color: #28a745; }
+
+/* Kontener główny */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* STRONA GŁÓWNA - Karty aut z ciemnym tłem */
+.fleet-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.car-link {
+    text-decoration: none;
+    color: white;
+    width: 260px;
+    background-color: #1a1a1a; /* Ciemne tło karty */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.car-link:hover { transform: translateY(-10px); }
+
+.car-link img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Naprawa rozdzielczości obrazka w karcie */
+}
+
+.car-link p {
+    font-weight: bold;
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    background-color: #0d1a2f; /* Ciemny "nagłówek" pod zdjęciem */
+}
+
+/* PODSTRONY AUT - Szczegóły */
+.details-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .image-container {
-    flex: 1 1 300px; /* Elastyczna szerokość, min. 300px */
-    max-width: 450px; /* Maksymalna szerokość zdjęcia */
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
     animation: floating 3s ease-in-out infinite; /* Animacja pływania */
 }
 
 .image-container img {
     width: 100%;
     height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* Kontener na tekst */
 .specs-container {
-    flex: 1 1 300px; /* Elastyczna szerokość, min. 300px */
-    text-align: left;
-}
-
-.specs-container h2 {
-    text-align: left; /* Nagłówek do lewej */
-    margin-top: 0;
-    color: #0d1a2f;
+    flex: 1;
+    min-width: 300px;
 }
 
 .specs-container ul {
-    list-style-type: none; /* Usunięcie kropek z listy */
+    list-style: none;
     padding: 0;
-    font-size: 1.1rem;
 }
 
 .specs-container li {
-    margin-bottom: 12px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #eee; /* Delikatna linia pod każdym punktem */
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
 }
 
-/* Przycisk powrotu */
 .details-btn {
     display: inline-block;
-    margin-top: 25px;
-    padding: 12px 25px;
-    background-color: #0d1a2f;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
 }
 
-.details-btn:hover {
-    background-color: #28a745;
-}
-
-/* --- ANIMACJA PŁYWANIA --- */
+/* Animacja */
 @keyframes floating {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-12px); } /* Uniesienie o 12px */
+    50% { transform: translateY(-15px); }
     100% { transform: translateY(0px); }
 }
 
-/* --- POPRAWKA DLA STRONY KONTAKTOWEJ --- */
-/* Usuwamy ewentualne style, które psuły kontakt */
-.contact-info {
-    text-align: left;
-    font-size: 1.1rem;
-}
-.contact-info li {
-    margin-bottom: 15px;
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #0d1a2f;
+    color: white;
 }

@@ -1,42 +1,104 @@
-/* Układ: Obrazek obok tekstu */
-.details-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap; /* Na telefonach wskoczy jedno pod drugie */
-    margin-top: 20px;
+/* Reset i Tło */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-image: url('images/tlo.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
-/* Styl dla mniejszego obrazka z animacją */
-.image-container {
-    flex: 1;
-    min-width: 300px;
-    animation: floating 3s ease-in-out infinite; /* Delikatne pływanie */
+header {
+    background-color: rgba(13, 26, 47, 0.9);
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.image-container img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Każda sekcja jako osobna karta na tle */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    background-color: rgba(0, 0, 0, 0.8); /* Czarne, lekko przezroczyste tło */
+    margin: 40px 0;
+    padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    transition: transform 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
-.image-container img:hover {
-    transform: scale(1.05); /* Powiększenie po najechaniu */
+h2 {
+    text-align: center;
+    color: #28a745;
+    margin-top: 0;
 }
 
-/* Styl dla tekstu obok */
-.specs-container {
+/* Galeria aut */
+.fleet-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.car-link {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    width: 250px;
+    transition: 0.3s;
+}
+
+.car-link:hover {
+    transform: translateY(-10px);
+    background: rgba(40, 167, 69, 0.2);
+}
+
+.car-link img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Kafelki "Dlaczego My" */
+.features-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature-box {
     flex: 1;
-    min-width: 300px;
-    text-align: left;
+    min-width: 250px;
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
 }
 
-/* Kluczowe klatki animacji pływania */
-@keyframes floating {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+.feature-box h3 { color: #28a745; }
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background: rgba(0,0,0,0.9);
 }

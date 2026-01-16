@@ -1,9 +1,9 @@
-/* Reset i Tło */
+/* --- RESET I TŁO --- */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #fff;
+    color: white; /* Tekst będzie biały, by pasował do ciemnych paneli */
     background-image: url('images/tlo.jpg');
     background-attachment: fixed;
     background-size: cover;
@@ -11,61 +11,65 @@ body {
 }
 
 header {
-    background-color: rgba(13, 26, 47, 0.9);
+    background-color: rgba(13, 26, 47, 0.95);
     padding: 20px 0;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 15px;
     font-weight: bold;
-    text-transform: uppercase;
+    transition: color 0.3s;
 }
 
-/* Każda sekcja jako osobna karta na tle */
+nav a:hover {
+    color: #28a745;
+}
+
+/* --- KONTENER GŁÓWNY --- */
 main {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
 
+/* Każda sekcja jako oddzielny panel */
 section {
-    background-color: rgba(0, 0, 0, 0.8); /* Czarne, lekko przezroczyste tło */
-    margin: 40px 0;
+    background-color: rgba(0, 0, 0, 0.85); /* Ciemne, eleganckie tło */
+    margin-bottom: 40px;
     padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border-radius: 20px;
     border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 h2 {
-    text-align: center;
     color: #28a745;
+    text-align: center;
     margin-top: 0;
+    font-size: 2rem;
 }
 
-/* Galeria aut */
+/* --- GALERIA AUT --- */
 .fleet-gallery {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
 .car-link {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 15px;
-    border-radius: 10px;
     text-decoration: none;
     color: white;
     text-align: center;
-    width: 250px;
-    transition: 0.3s;
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 15px;
+    width: 260px;
+    transition: transform 0.3s, background 0.3s;
 }
 
 .car-link:hover {
@@ -75,30 +79,34 @@ h2 {
 
 .car-link img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
-/* Kafelki "Dlaczego My" */
+/* --- KAFELKI ZALET --- */
 .features-grid {
     display: flex;
     gap: 20px;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .feature-box {
-    flex: 1;
-    min-width: 250px;
     background: rgba(255,255,255,0.05);
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 15px;
+    width: 250px;
     text-align: center;
 }
 
-.feature-box h3 { color: #28a745; }
+.feature-box h3 {
+    color: #28a745;
+    margin-bottom: 10px;
+}
 
+/* --- STOPKA --- */
 footer {
     text-align: center;
-    padding: 40px;
-    background: rgba(0,0,0,0.9);
+    padding: 30px;
+    background: rgba(13, 26, 47, 0.95);
+    margin-top: 50px;
 }
